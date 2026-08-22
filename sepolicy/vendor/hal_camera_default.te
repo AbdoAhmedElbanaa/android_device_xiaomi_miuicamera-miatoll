@@ -9,7 +9,7 @@ add_hwservice(hal_camera_server, vendor_hal_camerapostproc_xiaomi_hwservice)
 binder_call(vendor_hal_camerapostproc_xiaomi_client, vendor_hal_camerapostproc_xiaomi_server)
 binder_call(vendor_hal_camerapostproc_xiaomi_server, vendor_hal_camerapostproc_xiaomi_client)
 
-binder_call(hal_camera_default, platform_app)
+binder_call(hal_camera_default, platform_app_36)
 
 # Allow camera to read over /dev/adsprpc-smd-secure
 allow hal_camera_default vendor_xdsp_device:chr_file r_file_perms;
