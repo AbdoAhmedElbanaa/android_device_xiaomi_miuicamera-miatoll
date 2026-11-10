@@ -11,7 +11,13 @@ $(call inherit-product, vendor/xiaomi/miuicamera-miatoll/miuicamera-miatoll-vend
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-mimoji.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mimoji.xml \
     $(LOCAL_PATH)/configs/privapp-permissions-miuicamera.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-miuicamera.xml \
-    $(LOCAL_PATH)/configs/privapp-permissions-miuiextraphoto.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-miuiextraphoto.xml
+    $(LOCAL_PATH)/configs/privapp-permissions-miuiextraphoto.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-miuiextraphoto.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-miuigallery.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-miuigallery.xml
+
+# Gallery & GalleryEditor JNI libraries
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,vendor/xiaomi/miuicamera-miatoll/proprietary/system/priv-app/MIUIGallery/lib/arm64,$(TARGET_COPY_OUT_SYSTEM)/priv-app/MIUIGallery/lib/arm64) \
+    $(call find-copy-subdir-files,*,vendor/xiaomi/miuicamera-miatoll/proprietary/system/priv-app/MIUIGalleryEditor/lib/arm64,$(TARGET_COPY_OUT_SYSTEM)/priv-app/MIUIGalleryEditor/lib/arm64)
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
